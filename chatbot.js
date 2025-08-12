@@ -2,7 +2,7 @@ const { Client, LocalAuth } = require("whatsapp-web.js");
 const qrcode = require("qrcode-terminal");
 const fluxoInicial = require("./fluxos/inicial")
 
-//Criando nova instancia de Client
+//Criando nova instancia de Client do whatsapp-web.js
 const client = new Client({
     authStrategy: new LocalAuth()
 });
