@@ -26,8 +26,46 @@ const fs = require('fs');
     manager.addDocument('pt', 'nao tem luz', 'solicitar_iluminacao');
     manager.addDocument('pt', 'o poste esta apagado', 'solicitar_iluminacao');
     manager.addDocument('pt', 'o poste não está funcionando', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'quero iluminar minha rua', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'quero iluminar meu bairro', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'iluminar', 'solicitar iluminacao');
 
-    // Solicitação genérica
+    // Sugestoes chatgpt
+    //// Emojis e abreviações
+    manager.addDocument('pt', 'a rua tá mofando de breu 😢', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'preciso de luz já, por favor 🙏', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'luz urgente!', 'solicitar_iluminacao');
+
+    //// Frases compostas/longas
+    manager.addDocument('pt', 'aqui fica impossível andar à noite sem poste, tem que bota logo um', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'mesmo depois de várias reclamações, nada foi feito; queremos iluminação', 'solicitar_iluminacao');
+
+    //// Expressões de urgência
+    manager.addDocument('pt', 'isso é urgente, poste aqui pode causar acidente', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'uma lama caiu em cima do poste e não acende mais', 'solicitar_iluminacao'); // cenário problemático
+
+    //// Ironia ou humor
+    manager.addDocument('pt', 'tá escuro que só acende vaga-lume', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'sinal de fumaça era melhor que essa escuridão', 'solicitar_iluminacao');
+
+    //// Perguntas indiretas
+    manager.addDocument('pt', 'quando vão colocar iluminação nessa área?', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'alguém pode me dizer como solicitar luz aqui?', 'solicitar_iluminacao');
+
+    //// Regionais/gírias
+    manager.addDocument('pt', 'olha o breu danado aqui, precisava de um facho urgente', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'isso aqui tá mais escuro que boca de ca meeting', 'solicitar_iluminacao'); // extremo exagero local
+
+    //// Abreviações
+    manager.addDocument('pt', 'ai luz aq', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'solicito poste', 'solicitar_iluminacao');
+
+    //// Combinações com número de rua informados
+    manager.addDocument('pt', 'sem luz da rua 8, no final da rua principal', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'preciso que instalem poste perto do bar do João, 123', 'solicitar_iluminacao');
+
+
+    //// Solicitação genérica
     manager.addDocument('pt', 'Gostaria de formalizar uma solicitação de instalação de ponto de iluminação', 'solicitar_iluminacao');
     manager.addDocument('pt', 'Como devo proceder para requisitar a implantação de iluminação pública?', 'solicitar_iluminacao');
     manager.addDocument('pt', 'Desejo registrar oficialmente a necessidade de um novo poste de iluminação', 'solicitar_iluminacao');
@@ -78,6 +116,7 @@ const fs = require('fs');
     manager.addDocument('pt', 'o poste da frente quebrou e está sem luz', 'solicitar_iluminacao');
     manager.addDocument('pt', 'quero reportar falta de iluminação pública', 'solicitar_iluminacao');
     manager.addDocument('pt', 'como faço para pedir um novo poste?', 'solicitar_iluminacao');
+    manager.addDocument('pt', 'qero luz', 'solicitar_iluminação');
 
     // Variacoes perguntas
     manager.addDocument('pt', 'onde posso pedir instalação de poste?', 'solicitar_iluminacao');
@@ -109,6 +148,10 @@ const fs = require('fs');
     manager.addDocument('pt', 'nao vai arrumar nunca?', 'verificar_andamento');
     manager.addDocument('pt', 'ainda não arrumaram minha luz', 'verificar_andamento');
     manager.addDocument('pt', 'ainda ta escuro aqui', 'verificar_andamento');
+
+    // Frases curtas
+    manager.addDocument('pt', 'andamento', 'verificar_andamento');
+    manager.addDocument('pt', 'ver andamento', 'verificar_andamento');
 
     // Frases formais
     manager.addDocument('pt', 'Gostaria de verificar o status atual da minha solicitação de iluminação pública', 'verificar_andamento');
@@ -262,6 +305,30 @@ const fs = require('fs');
     manager.addDocument('pt', 'isso é emergência, pare o chatbot', 'falar_atendente');
     manager.addDocument('pt', 'me transfira imediatamente', 'falar_atendente');
     manager.addDocument('pt', 'sem tempo a perder, quero atendimento humano', 'falar_atendente');
+
+    // 4. Identificadores None
+    manager.addDocument('pt', 'vai tomar no cu', 'None');
+    manager.addDocument('pt', 'vai se fuder', 'None');
+    manager.addDocument('pt', 'porra', 'None');
+    manager.addDocument('pt', 'caralho', 'None');
+    manager.addDocument('pt', 'puta', 'None');
+    manager.addDocument('pt', 'vagabundos', 'None');
+    manager.addDocument('pt', 'prefeito', 'None');
+    manager.addDocument('pt', 'municipal', 'None');
+    manager.addDocument('pt', 'cu?', 'None');
+    manager.addDocument('pt', 'odeio', 'None');
+    manager.addDocument('pt', 'bom dia', 'None');
+    manager.addDocument('pt', 'boa tarde', 'None');
+    manager.addDocument('pt', 'boa noite', 'None');
+    manager.addDocument('pt', 'oi', 'None');
+    manager.addDocument('pt', 'tchau', 'None');
+    manager.addDocument('pt', 'eai', 'None');
+    manager.addDocument('pt', 'salve', 'None');
+    manager.addDocument('pt', 'tmj', 'None');
+
+
+
+
 
     // Treina e salva o modelo
     console.log("Treinando modelo NLP...");

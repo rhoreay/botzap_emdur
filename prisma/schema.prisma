@@ -10,35 +10,35 @@ datasource db {
 
 model demandas {
   id           Int       @id @default(autoincrement())
-  usuario_id   Int                          @map("usuarioId")
+  usuario_id   Int
   tipo         String    @db.VarChar(100)
   descricao    String?   @db.Text
   status       String?   @default("aberta") @db.VarChar(50)
-  data_criacao DateTime? @default(now()) @db.Timestamp(0) @map("dataCriacao")
+  data_criacao DateTime? @default(now()) @db.Timestamp(0)
   usuarios     usuarios  @relation(fields: [usuario_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "demandas_ibfk_1")
 
   @@index([usuario_id], map: "usuario_id")
 }
 
-model usuarios {
-  id                 Int               @id @default(autoincrement())
-  nome_completo      String            @db.VarChar(255)    @map("nomeCompleto")
-  cpf                String            @unique(map: "cpf") @db.Char(11)
-  telefone           String            @db.VarChar(20)     
-  data_nascimento    DateTime?         @db.Date            @map("dataNascimento")
-  id_whatsappwebjs   String            @unique(map: "id_whatsappwebjs") @db.VarChar(255)
-  estado_conversa_id Int?              @map("estadoConversaId")
-  demandas           demandas[]
-  estados_conversa   estados_conversa? @relation(fields: [estado_conversa_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "usuarios_ibfk_1")
-
-  @@index([estado_conversa_id], map: "estado_conversa_id")
-}
-
-model estados_conversa {
+model estadosConversa {
   id        Int        @id @default(autoincrement())
   nome      String     @db.VarChar(100)
   descricao String?    @db.Text
   usuarios  usuarios[]
 
-  @@map("estadosConversa")
+  @@map("estados_conversa")
+}
+
+model usuarios {
+  id                 Int               @id @default(autoincrement())
+  nome_completo      String            @db.VarChar(255)
+  cpf                String            @unique(map: "cpf") @db.Char(11)
+  telefone           String            @db.VarChar(20)
+  data_nascimento    DateTime?         @db.Date
+  id_whatsappwebjs   String            @unique(map: "id_whatsappwebjs") @db.VarChar(255)
+  estado_conversa_id Int?
+  demandas           demandas[]
+  estados_conversa   estadosConversa? @relation(fields: [estado_conversa_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "usuarios_ibfk_1")
+
+  @@index([estado_conversa_id], map: "estado_conversa_id")
 }

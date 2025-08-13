@@ -11,7 +11,7 @@ const rl = readline.createInterface({
 const manager = new NlpManager({
     languages: ['pt'],
     nlu: { useSpellCheck: true }, //corrige erros gramaticais
-    threshold: 0.85 //nota de corte da semelhança para ser vinculado à um intent
+    threshold: 0.9 //nota de corte da semelhança para ser vinculado à um intent
 })
 
 manager.load('nlp/modelo.nlp');
