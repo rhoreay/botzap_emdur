@@ -40,9 +40,8 @@ const fluxoInicial = async (client, chat, message, idConversa, mensagemAtivacao)
             idConversa,
             `Sou o robô correspondente da EMDUR, Como posso ajudar você hoje?\n\n` +
             `1. Solicitar um ponto de iluminação\n` +
-            `2. Comunicar mal funcionamento de iluminação existente\n` +
-            `3. Verificar andamento de pedido de iluminação\n` +
-            `4. Falar com um atendente humano`
+            `2. Verificar andamento de pedido de iluminação\n` +
+            `3. Falar com um atendente humano`
         );
     }
 }
