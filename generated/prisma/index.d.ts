@@ -1089,78 +1089,78 @@ export namespace Prisma {
 
   export type DemandasAvgAggregateOutputType = {
     id: number | null
-    usuario_id: number | null
+    usuarioId: number | null
   }
 
   export type DemandasSumAggregateOutputType = {
     id: number | null
-    usuario_id: number | null
+    usuarioId: number | null
   }
 
   export type DemandasMinAggregateOutputType = {
     id: number | null
-    usuario_id: number | null
+    usuarioId: number | null
     tipo: string | null
     descricao: string | null
     status: string | null
-    data_criacao: Date | null
+    dataCriacao: Date | null
   }
 
   export type DemandasMaxAggregateOutputType = {
     id: number | null
-    usuario_id: number | null
+    usuarioId: number | null
     tipo: string | null
     descricao: string | null
     status: string | null
-    data_criacao: Date | null
+    dataCriacao: Date | null
   }
 
   export type DemandasCountAggregateOutputType = {
     id: number
-    usuario_id: number
+    usuarioId: number
     tipo: number
     descricao: number
     status: number
-    data_criacao: number
+    dataCriacao: number
     _all: number
   }
 
 
   export type DemandasAvgAggregateInputType = {
     id?: true
-    usuario_id?: true
+    usuarioId?: true
   }
 
   export type DemandasSumAggregateInputType = {
     id?: true
-    usuario_id?: true
+    usuarioId?: true
   }
 
   export type DemandasMinAggregateInputType = {
     id?: true
-    usuario_id?: true
+    usuarioId?: true
     tipo?: true
     descricao?: true
     status?: true
-    data_criacao?: true
+    dataCriacao?: true
   }
 
   export type DemandasMaxAggregateInputType = {
     id?: true
-    usuario_id?: true
+    usuarioId?: true
     tipo?: true
     descricao?: true
     status?: true
-    data_criacao?: true
+    dataCriacao?: true
   }
 
   export type DemandasCountAggregateInputType = {
     id?: true
-    usuario_id?: true
+    usuarioId?: true
     tipo?: true
     descricao?: true
     status?: true
-    data_criacao?: true
+    dataCriacao?: true
     _all?: true
   }
 
@@ -1252,11 +1252,11 @@ export namespace Prisma {
 
   export type DemandasGroupByOutputType = {
     id: number
-    usuario_id: number
+    usuarioId: number
     tipo: string
     descricao: string | null
     status: string | null
-    data_criacao: Date | null
+    dataCriacao: Date | null
     _count: DemandasCountAggregateOutputType | null
     _avg: DemandasAvgAggregateOutputType | null
     _sum: DemandasSumAggregateOutputType | null
@@ -1280,42 +1280,42 @@ export namespace Prisma {
 
   export type demandasSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    usuario_id?: boolean
+    usuarioId?: boolean
     tipo?: boolean
     descricao?: boolean
     status?: boolean
-    data_criacao?: boolean
-    usuarios?: boolean | usuariosDefaultArgs<ExtArgs>
+    dataCriacao?: boolean
+    usuario?: boolean | usuariosDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["demandas"]>
 
 
 
   export type demandasSelectScalar = {
     id?: boolean
-    usuario_id?: boolean
+    usuarioId?: boolean
     tipo?: boolean
     descricao?: boolean
     status?: boolean
-    data_criacao?: boolean
+    dataCriacao?: boolean
   }
 
-  export type demandasOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "usuario_id" | "tipo" | "descricao" | "status" | "data_criacao", ExtArgs["result"]["demandas"]>
+  export type demandasOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "usuarioId" | "tipo" | "descricao" | "status" | "dataCriacao", ExtArgs["result"]["demandas"]>
   export type demandasInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    usuarios?: boolean | usuariosDefaultArgs<ExtArgs>
+    usuario?: boolean | usuariosDefaultArgs<ExtArgs>
   }
 
   export type $demandasPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "demandas"
     objects: {
-      usuarios: Prisma.$usuariosPayload<ExtArgs>
+      usuario: Prisma.$usuariosPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      usuario_id: number
+      usuarioId: number
       tipo: string
       descricao: string | null
       status: string | null
-      data_criacao: Date | null
+      dataCriacao: Date | null
     }, ExtArgs["result"]["demandas"]>
     composites: {}
   }
@@ -1656,7 +1656,7 @@ export namespace Prisma {
    */
   export interface Prisma__demandasClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    usuarios<T extends usuariosDefaultArgs<ExtArgs> = {}>(args?: Subset<T, usuariosDefaultArgs<ExtArgs>>): Prisma__usuariosClient<$Result.GetResult<Prisma.$usuariosPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    usuario<T extends usuariosDefaultArgs<ExtArgs> = {}>(args?: Subset<T, usuariosDefaultArgs<ExtArgs>>): Prisma__usuariosClient<$Result.GetResult<Prisma.$usuariosPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1687,11 +1687,11 @@ export namespace Prisma {
    */
   interface demandasFieldRefs {
     readonly id: FieldRef<"demandas", 'Int'>
-    readonly usuario_id: FieldRef<"demandas", 'Int'>
+    readonly usuarioId: FieldRef<"demandas", 'Int'>
     readonly tipo: FieldRef<"demandas", 'String'>
     readonly descricao: FieldRef<"demandas", 'String'>
     readonly status: FieldRef<"demandas", 'String'>
-    readonly data_criacao: FieldRef<"demandas", 'DateTime'>
+    readonly dataCriacao: FieldRef<"demandas", 'DateTime'>
   }
     
 
@@ -3034,84 +3034,84 @@ export namespace Prisma {
 
   export type UsuariosAvgAggregateOutputType = {
     id: number | null
-    estado_conversa_id: number | null
+    estadoConversaId: number | null
   }
 
   export type UsuariosSumAggregateOutputType = {
     id: number | null
-    estado_conversa_id: number | null
+    estadoConversaId: number | null
   }
 
   export type UsuariosMinAggregateOutputType = {
     id: number | null
-    nome_completo: string | null
+    nomeCompleto: string | null
     cpf: string | null
     telefone: string | null
-    data_nascimento: Date | null
-    id_whatsappwebjs: string | null
-    estado_conversa_id: number | null
+    dataNascimento: Date | null
+    idWhatsappwebjs: string | null
+    estadoConversaId: number | null
   }
 
   export type UsuariosMaxAggregateOutputType = {
     id: number | null
-    nome_completo: string | null
+    nomeCompleto: string | null
     cpf: string | null
     telefone: string | null
-    data_nascimento: Date | null
-    id_whatsappwebjs: string | null
-    estado_conversa_id: number | null
+    dataNascimento: Date | null
+    idWhatsappwebjs: string | null
+    estadoConversaId: number | null
   }
 
   export type UsuariosCountAggregateOutputType = {
     id: number
-    nome_completo: number
+    nomeCompleto: number
     cpf: number
     telefone: number
-    data_nascimento: number
-    id_whatsappwebjs: number
-    estado_conversa_id: number
+    dataNascimento: number
+    idWhatsappwebjs: number
+    estadoConversaId: number
     _all: number
   }
 
 
   export type UsuariosAvgAggregateInputType = {
     id?: true
-    estado_conversa_id?: true
+    estadoConversaId?: true
   }
 
   export type UsuariosSumAggregateInputType = {
     id?: true
-    estado_conversa_id?: true
+    estadoConversaId?: true
   }
 
   export type UsuariosMinAggregateInputType = {
     id?: true
-    nome_completo?: true
+    nomeCompleto?: true
     cpf?: true
     telefone?: true
-    data_nascimento?: true
-    id_whatsappwebjs?: true
-    estado_conversa_id?: true
+    dataNascimento?: true
+    idWhatsappwebjs?: true
+    estadoConversaId?: true
   }
 
   export type UsuariosMaxAggregateInputType = {
     id?: true
-    nome_completo?: true
+    nomeCompleto?: true
     cpf?: true
     telefone?: true
-    data_nascimento?: true
-    id_whatsappwebjs?: true
-    estado_conversa_id?: true
+    dataNascimento?: true
+    idWhatsappwebjs?: true
+    estadoConversaId?: true
   }
 
   export type UsuariosCountAggregateInputType = {
     id?: true
-    nome_completo?: true
+    nomeCompleto?: true
     cpf?: true
     telefone?: true
-    data_nascimento?: true
-    id_whatsappwebjs?: true
-    estado_conversa_id?: true
+    dataNascimento?: true
+    idWhatsappwebjs?: true
+    estadoConversaId?: true
     _all?: true
   }
 
@@ -3203,12 +3203,12 @@ export namespace Prisma {
 
   export type UsuariosGroupByOutputType = {
     id: number
-    nome_completo: string
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento: Date | null
-    id_whatsappwebjs: string
-    estado_conversa_id: number | null
+    dataNascimento: Date | null
+    idWhatsappwebjs: string
+    estadoConversaId: number | null
     _count: UsuariosCountAggregateOutputType | null
     _avg: UsuariosAvgAggregateOutputType | null
     _sum: UsuariosSumAggregateOutputType | null
@@ -3232,14 +3232,14 @@ export namespace Prisma {
 
   export type usuariosSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    nome_completo?: boolean
+    nomeCompleto?: boolean
     cpf?: boolean
     telefone?: boolean
-    data_nascimento?: boolean
-    id_whatsappwebjs?: boolean
-    estado_conversa_id?: boolean
+    dataNascimento?: boolean
+    idWhatsappwebjs?: boolean
+    estadoConversaId?: boolean
     demandas?: boolean | usuarios$demandasArgs<ExtArgs>
-    estados_conversa?: boolean | usuarios$estados_conversaArgs<ExtArgs>
+    estadosConversa?: boolean | usuarios$estadosConversaArgs<ExtArgs>
     _count?: boolean | UsuariosCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["usuarios"]>
 
@@ -3247,18 +3247,18 @@ export namespace Prisma {
 
   export type usuariosSelectScalar = {
     id?: boolean
-    nome_completo?: boolean
+    nomeCompleto?: boolean
     cpf?: boolean
     telefone?: boolean
-    data_nascimento?: boolean
-    id_whatsappwebjs?: boolean
-    estado_conversa_id?: boolean
+    dataNascimento?: boolean
+    idWhatsappwebjs?: boolean
+    estadoConversaId?: boolean
   }
 
-  export type usuariosOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome_completo" | "cpf" | "telefone" | "data_nascimento" | "id_whatsappwebjs" | "estado_conversa_id", ExtArgs["result"]["usuarios"]>
+  export type usuariosOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nomeCompleto" | "cpf" | "telefone" | "dataNascimento" | "idWhatsappwebjs" | "estadoConversaId", ExtArgs["result"]["usuarios"]>
   export type usuariosInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     demandas?: boolean | usuarios$demandasArgs<ExtArgs>
-    estados_conversa?: boolean | usuarios$estados_conversaArgs<ExtArgs>
+    estadosConversa?: boolean | usuarios$estadosConversaArgs<ExtArgs>
     _count?: boolean | UsuariosCountOutputTypeDefaultArgs<ExtArgs>
   }
 
@@ -3266,16 +3266,16 @@ export namespace Prisma {
     name: "usuarios"
     objects: {
       demandas: Prisma.$demandasPayload<ExtArgs>[]
-      estados_conversa: Prisma.$estadosConversaPayload<ExtArgs> | null
+      estadosConversa: Prisma.$estadosConversaPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      nome_completo: string
+      nomeCompleto: string
       cpf: string
       telefone: string
-      data_nascimento: Date | null
-      id_whatsappwebjs: string
-      estado_conversa_id: number | null
+      dataNascimento: Date | null
+      idWhatsappwebjs: string
+      estadoConversaId: number | null
     }, ExtArgs["result"]["usuarios"]>
     composites: {}
   }
@@ -3617,7 +3617,7 @@ export namespace Prisma {
   export interface Prisma__usuariosClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     demandas<T extends usuarios$demandasArgs<ExtArgs> = {}>(args?: Subset<T, usuarios$demandasArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$demandasPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    estados_conversa<T extends usuarios$estados_conversaArgs<ExtArgs> = {}>(args?: Subset<T, usuarios$estados_conversaArgs<ExtArgs>>): Prisma__estadosConversaClient<$Result.GetResult<Prisma.$estadosConversaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    estadosConversa<T extends usuarios$estadosConversaArgs<ExtArgs> = {}>(args?: Subset<T, usuarios$estadosConversaArgs<ExtArgs>>): Prisma__estadosConversaClient<$Result.GetResult<Prisma.$estadosConversaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3648,12 +3648,12 @@ export namespace Prisma {
    */
   interface usuariosFieldRefs {
     readonly id: FieldRef<"usuarios", 'Int'>
-    readonly nome_completo: FieldRef<"usuarios", 'String'>
+    readonly nomeCompleto: FieldRef<"usuarios", 'String'>
     readonly cpf: FieldRef<"usuarios", 'String'>
     readonly telefone: FieldRef<"usuarios", 'String'>
-    readonly data_nascimento: FieldRef<"usuarios", 'DateTime'>
-    readonly id_whatsappwebjs: FieldRef<"usuarios", 'String'>
-    readonly estado_conversa_id: FieldRef<"usuarios", 'Int'>
+    readonly dataNascimento: FieldRef<"usuarios", 'DateTime'>
+    readonly idWhatsappwebjs: FieldRef<"usuarios", 'String'>
+    readonly estadoConversaId: FieldRef<"usuarios", 'Int'>
   }
     
 
@@ -4021,9 +4021,9 @@ export namespace Prisma {
   }
 
   /**
-   * usuarios.estados_conversa
+   * usuarios.estadosConversa
    */
-  export type usuarios$estados_conversaArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type usuarios$estadosConversaArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Select specific fields to fetch from the estadosConversa
      */
@@ -4074,11 +4074,11 @@ export namespace Prisma {
 
   export const DemandasScalarFieldEnum: {
     id: 'id',
-    usuario_id: 'usuario_id',
+    usuarioId: 'usuarioId',
     tipo: 'tipo',
     descricao: 'descricao',
     status: 'status',
-    data_criacao: 'data_criacao'
+    dataCriacao: 'dataCriacao'
   };
 
   export type DemandasScalarFieldEnum = (typeof DemandasScalarFieldEnum)[keyof typeof DemandasScalarFieldEnum]
@@ -4095,12 +4095,12 @@ export namespace Prisma {
 
   export const UsuariosScalarFieldEnum: {
     id: 'id',
-    nome_completo: 'nome_completo',
+    nomeCompleto: 'nomeCompleto',
     cpf: 'cpf',
     telefone: 'telefone',
-    data_nascimento: 'data_nascimento',
-    id_whatsappwebjs: 'id_whatsappwebjs',
-    estado_conversa_id: 'estado_conversa_id'
+    dataNascimento: 'dataNascimento',
+    idWhatsappwebjs: 'idWhatsappwebjs',
+    estadoConversaId: 'estadoConversaId'
   };
 
   export type UsuariosScalarFieldEnum = (typeof UsuariosScalarFieldEnum)[keyof typeof UsuariosScalarFieldEnum]
@@ -4140,10 +4140,10 @@ export namespace Prisma {
 
 
   export const usuariosOrderByRelevanceFieldEnum: {
-    nome_completo: 'nome_completo',
+    nomeCompleto: 'nomeCompleto',
     cpf: 'cpf',
     telefone: 'telefone',
-    id_whatsappwebjs: 'id_whatsappwebjs'
+    idWhatsappwebjs: 'idWhatsappwebjs'
   };
 
   export type usuariosOrderByRelevanceFieldEnum = (typeof usuariosOrderByRelevanceFieldEnum)[keyof typeof usuariosOrderByRelevanceFieldEnum]
@@ -4190,22 +4190,22 @@ export namespace Prisma {
     OR?: demandasWhereInput[]
     NOT?: demandasWhereInput | demandasWhereInput[]
     id?: IntFilter<"demandas"> | number
-    usuario_id?: IntFilter<"demandas"> | number
+    usuarioId?: IntFilter<"demandas"> | number
     tipo?: StringFilter<"demandas"> | string
     descricao?: StringNullableFilter<"demandas"> | string | null
     status?: StringNullableFilter<"demandas"> | string | null
-    data_criacao?: DateTimeNullableFilter<"demandas"> | Date | string | null
-    usuarios?: XOR<UsuariosScalarRelationFilter, usuariosWhereInput>
+    dataCriacao?: DateTimeNullableFilter<"demandas"> | Date | string | null
+    usuario?: XOR<UsuariosScalarRelationFilter, usuariosWhereInput>
   }
 
   export type demandasOrderByWithRelationInput = {
     id?: SortOrder
-    usuario_id?: SortOrder
+    usuarioId?: SortOrder
     tipo?: SortOrder
     descricao?: SortOrderInput | SortOrder
     status?: SortOrderInput | SortOrder
-    data_criacao?: SortOrderInput | SortOrder
-    usuarios?: usuariosOrderByWithRelationInput
+    dataCriacao?: SortOrderInput | SortOrder
+    usuario?: usuariosOrderByWithRelationInput
     _relevance?: demandasOrderByRelevanceInput
   }
 
@@ -4214,21 +4214,21 @@ export namespace Prisma {
     AND?: demandasWhereInput | demandasWhereInput[]
     OR?: demandasWhereInput[]
     NOT?: demandasWhereInput | demandasWhereInput[]
-    usuario_id?: IntFilter<"demandas"> | number
+    usuarioId?: IntFilter<"demandas"> | number
     tipo?: StringFilter<"demandas"> | string
     descricao?: StringNullableFilter<"demandas"> | string | null
     status?: StringNullableFilter<"demandas"> | string | null
-    data_criacao?: DateTimeNullableFilter<"demandas"> | Date | string | null
-    usuarios?: XOR<UsuariosScalarRelationFilter, usuariosWhereInput>
+    dataCriacao?: DateTimeNullableFilter<"demandas"> | Date | string | null
+    usuario?: XOR<UsuariosScalarRelationFilter, usuariosWhereInput>
   }, "id">
 
   export type demandasOrderByWithAggregationInput = {
     id?: SortOrder
-    usuario_id?: SortOrder
+    usuarioId?: SortOrder
     tipo?: SortOrder
     descricao?: SortOrderInput | SortOrder
     status?: SortOrderInput | SortOrder
-    data_criacao?: SortOrderInput | SortOrder
+    dataCriacao?: SortOrderInput | SortOrder
     _count?: demandasCountOrderByAggregateInput
     _avg?: demandasAvgOrderByAggregateInput
     _max?: demandasMaxOrderByAggregateInput
@@ -4241,11 +4241,11 @@ export namespace Prisma {
     OR?: demandasScalarWhereWithAggregatesInput[]
     NOT?: demandasScalarWhereWithAggregatesInput | demandasScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"demandas"> | number
-    usuario_id?: IntWithAggregatesFilter<"demandas"> | number
+    usuarioId?: IntWithAggregatesFilter<"demandas"> | number
     tipo?: StringWithAggregatesFilter<"demandas"> | string
     descricao?: StringNullableWithAggregatesFilter<"demandas"> | string | null
     status?: StringNullableWithAggregatesFilter<"demandas"> | string | null
-    data_criacao?: DateTimeNullableWithAggregatesFilter<"demandas"> | Date | string | null
+    dataCriacao?: DateTimeNullableWithAggregatesFilter<"demandas"> | Date | string | null
   }
 
   export type estadosConversaWhereInput = {
@@ -4301,52 +4301,52 @@ export namespace Prisma {
     OR?: usuariosWhereInput[]
     NOT?: usuariosWhereInput | usuariosWhereInput[]
     id?: IntFilter<"usuarios"> | number
-    nome_completo?: StringFilter<"usuarios"> | string
+    nomeCompleto?: StringFilter<"usuarios"> | string
     cpf?: StringFilter<"usuarios"> | string
     telefone?: StringFilter<"usuarios"> | string
-    data_nascimento?: DateTimeNullableFilter<"usuarios"> | Date | string | null
-    id_whatsappwebjs?: StringFilter<"usuarios"> | string
-    estado_conversa_id?: IntNullableFilter<"usuarios"> | number | null
+    dataNascimento?: DateTimeNullableFilter<"usuarios"> | Date | string | null
+    idWhatsappwebjs?: StringFilter<"usuarios"> | string
+    estadoConversaId?: IntNullableFilter<"usuarios"> | number | null
     demandas?: DemandasListRelationFilter
-    estados_conversa?: XOR<EstadosConversaNullableScalarRelationFilter, estadosConversaWhereInput> | null
+    estadosConversa?: XOR<EstadosConversaNullableScalarRelationFilter, estadosConversaWhereInput> | null
   }
 
   export type usuariosOrderByWithRelationInput = {
     id?: SortOrder
-    nome_completo?: SortOrder
+    nomeCompleto?: SortOrder
     cpf?: SortOrder
     telefone?: SortOrder
-    data_nascimento?: SortOrderInput | SortOrder
-    id_whatsappwebjs?: SortOrder
-    estado_conversa_id?: SortOrderInput | SortOrder
+    dataNascimento?: SortOrderInput | SortOrder
+    idWhatsappwebjs?: SortOrder
+    estadoConversaId?: SortOrderInput | SortOrder
     demandas?: demandasOrderByRelationAggregateInput
-    estados_conversa?: estadosConversaOrderByWithRelationInput
+    estadosConversa?: estadosConversaOrderByWithRelationInput
     _relevance?: usuariosOrderByRelevanceInput
   }
 
   export type usuariosWhereUniqueInput = Prisma.AtLeast<{
     id?: number
     cpf?: string
-    id_whatsappwebjs?: string
+    idWhatsappwebjs?: string
     AND?: usuariosWhereInput | usuariosWhereInput[]
     OR?: usuariosWhereInput[]
     NOT?: usuariosWhereInput | usuariosWhereInput[]
-    nome_completo?: StringFilter<"usuarios"> | string
+    nomeCompleto?: StringFilter<"usuarios"> | string
     telefone?: StringFilter<"usuarios"> | string
-    data_nascimento?: DateTimeNullableFilter<"usuarios"> | Date | string | null
-    estado_conversa_id?: IntNullableFilter<"usuarios"> | number | null
+    dataNascimento?: DateTimeNullableFilter<"usuarios"> | Date | string | null
+    estadoConversaId?: IntNullableFilter<"usuarios"> | number | null
     demandas?: DemandasListRelationFilter
-    estados_conversa?: XOR<EstadosConversaNullableScalarRelationFilter, estadosConversaWhereInput> | null
-  }, "id" | "cpf" | "id_whatsappwebjs">
+    estadosConversa?: XOR<EstadosConversaNullableScalarRelationFilter, estadosConversaWhereInput> | null
+  }, "id" | "cpf" | "idWhatsappwebjs">
 
   export type usuariosOrderByWithAggregationInput = {
     id?: SortOrder
-    nome_completo?: SortOrder
+    nomeCompleto?: SortOrder
     cpf?: SortOrder
     telefone?: SortOrder
-    data_nascimento?: SortOrderInput | SortOrder
-    id_whatsappwebjs?: SortOrder
-    estado_conversa_id?: SortOrderInput | SortOrder
+    dataNascimento?: SortOrderInput | SortOrder
+    idWhatsappwebjs?: SortOrder
+    estadoConversaId?: SortOrderInput | SortOrder
     _count?: usuariosCountOrderByAggregateInput
     _avg?: usuariosAvgOrderByAggregateInput
     _max?: usuariosMaxOrderByAggregateInput
@@ -4359,97 +4359,97 @@ export namespace Prisma {
     OR?: usuariosScalarWhereWithAggregatesInput[]
     NOT?: usuariosScalarWhereWithAggregatesInput | usuariosScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"usuarios"> | number
-    nome_completo?: StringWithAggregatesFilter<"usuarios"> | string
+    nomeCompleto?: StringWithAggregatesFilter<"usuarios"> | string
     cpf?: StringWithAggregatesFilter<"usuarios"> | string
     telefone?: StringWithAggregatesFilter<"usuarios"> | string
-    data_nascimento?: DateTimeNullableWithAggregatesFilter<"usuarios"> | Date | string | null
-    id_whatsappwebjs?: StringWithAggregatesFilter<"usuarios"> | string
-    estado_conversa_id?: IntNullableWithAggregatesFilter<"usuarios"> | number | null
+    dataNascimento?: DateTimeNullableWithAggregatesFilter<"usuarios"> | Date | string | null
+    idWhatsappwebjs?: StringWithAggregatesFilter<"usuarios"> | string
+    estadoConversaId?: IntNullableWithAggregatesFilter<"usuarios"> | number | null
   }
 
   export type demandasCreateInput = {
     tipo: string
     descricao?: string | null
     status?: string | null
-    data_criacao?: Date | string | null
-    usuarios: usuariosCreateNestedOneWithoutDemandasInput
+    dataCriacao?: Date | string | null
+    usuario: usuariosCreateNestedOneWithoutDemandasInput
   }
 
   export type demandasUncheckedCreateInput = {
     id?: number
-    usuario_id: number
+    usuarioId: number
     tipo: string
     descricao?: string | null
     status?: string | null
-    data_criacao?: Date | string | null
+    dataCriacao?: Date | string | null
   }
 
   export type demandasUpdateInput = {
     tipo?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
     status?: NullableStringFieldUpdateOperationsInput | string | null
-    data_criacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    usuarios?: usuariosUpdateOneRequiredWithoutDemandasNestedInput
+    dataCriacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    usuario?: usuariosUpdateOneRequiredWithoutDemandasNestedInput
   }
 
   export type demandasUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    usuario_id?: IntFieldUpdateOperationsInput | number
+    usuarioId?: IntFieldUpdateOperationsInput | number
     tipo?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
     status?: NullableStringFieldUpdateOperationsInput | string | null
-    data_criacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    dataCriacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type demandasCreateManyInput = {
     id?: number
-    usuario_id: number
+    usuarioId: number
     tipo: string
     descricao?: string | null
     status?: string | null
-    data_criacao?: Date | string | null
+    dataCriacao?: Date | string | null
   }
 
   export type demandasUpdateManyMutationInput = {
     tipo?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
     status?: NullableStringFieldUpdateOperationsInput | string | null
-    data_criacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    dataCriacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type demandasUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    usuario_id?: IntFieldUpdateOperationsInput | number
+    usuarioId?: IntFieldUpdateOperationsInput | number
     tipo?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
     status?: NullableStringFieldUpdateOperationsInput | string | null
-    data_criacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    dataCriacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type estadosConversaCreateInput = {
     nome: string
     descricao?: string | null
-    usuarios?: usuariosCreateNestedManyWithoutEstados_conversaInput
+    usuarios?: usuariosCreateNestedManyWithoutEstadosConversaInput
   }
 
   export type estadosConversaUncheckedCreateInput = {
     id?: number
     nome: string
     descricao?: string | null
-    usuarios?: usuariosUncheckedCreateNestedManyWithoutEstados_conversaInput
+    usuarios?: usuariosUncheckedCreateNestedManyWithoutEstadosConversaInput
   }
 
   export type estadosConversaUpdateInput = {
     nome?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
-    usuarios?: usuariosUpdateManyWithoutEstados_conversaNestedInput
+    usuarios?: usuariosUpdateManyWithoutEstadosConversaNestedInput
   }
 
   export type estadosConversaUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
-    usuarios?: usuariosUncheckedUpdateManyWithoutEstados_conversaNestedInput
+    usuarios?: usuariosUncheckedUpdateManyWithoutEstadosConversaNestedInput
   }
 
   export type estadosConversaCreateManyInput = {
@@ -4470,73 +4470,73 @@ export namespace Prisma {
   }
 
   export type usuariosCreateInput = {
-    nome_completo: string
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento?: Date | string | null
-    id_whatsappwebjs: string
-    demandas?: demandasCreateNestedManyWithoutUsuariosInput
-    estados_conversa?: estadosConversaCreateNestedOneWithoutUsuariosInput
+    dataNascimento?: Date | string | null
+    idWhatsappwebjs: string
+    demandas?: demandasCreateNestedManyWithoutUsuarioInput
+    estadosConversa?: estadosConversaCreateNestedOneWithoutUsuariosInput
   }
 
   export type usuariosUncheckedCreateInput = {
     id?: number
-    nome_completo: string
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento?: Date | string | null
-    id_whatsappwebjs: string
-    estado_conversa_id?: number | null
-    demandas?: demandasUncheckedCreateNestedManyWithoutUsuariosInput
+    dataNascimento?: Date | string | null
+    idWhatsappwebjs: string
+    estadoConversaId?: number | null
+    demandas?: demandasUncheckedCreateNestedManyWithoutUsuarioInput
   }
 
   export type usuariosUpdateInput = {
-    nome_completo?: StringFieldUpdateOperationsInput | string
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
-    demandas?: demandasUpdateManyWithoutUsuariosNestedInput
-    estados_conversa?: estadosConversaUpdateOneWithoutUsuariosNestedInput
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
+    demandas?: demandasUpdateManyWithoutUsuarioNestedInput
+    estadosConversa?: estadosConversaUpdateOneWithoutUsuariosNestedInput
   }
 
   export type usuariosUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    nome_completo?: StringFieldUpdateOperationsInput | string
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
-    estado_conversa_id?: NullableIntFieldUpdateOperationsInput | number | null
-    demandas?: demandasUncheckedUpdateManyWithoutUsuariosNestedInput
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
+    estadoConversaId?: NullableIntFieldUpdateOperationsInput | number | null
+    demandas?: demandasUncheckedUpdateManyWithoutUsuarioNestedInput
   }
 
   export type usuariosCreateManyInput = {
     id?: number
-    nome_completo: string
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento?: Date | string | null
-    id_whatsappwebjs: string
-    estado_conversa_id?: number | null
+    dataNascimento?: Date | string | null
+    idWhatsappwebjs: string
+    estadoConversaId?: number | null
   }
 
   export type usuariosUpdateManyMutationInput = {
-    nome_completo?: StringFieldUpdateOperationsInput | string
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
   }
 
   export type usuariosUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    nome_completo?: StringFieldUpdateOperationsInput | string
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
-    estado_conversa_id?: NullableIntFieldUpdateOperationsInput | number | null
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
+    estadoConversaId?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -4609,39 +4609,39 @@ export namespace Prisma {
 
   export type demandasCountOrderByAggregateInput = {
     id?: SortOrder
-    usuario_id?: SortOrder
+    usuarioId?: SortOrder
     tipo?: SortOrder
     descricao?: SortOrder
     status?: SortOrder
-    data_criacao?: SortOrder
+    dataCriacao?: SortOrder
   }
 
   export type demandasAvgOrderByAggregateInput = {
     id?: SortOrder
-    usuario_id?: SortOrder
+    usuarioId?: SortOrder
   }
 
   export type demandasMaxOrderByAggregateInput = {
     id?: SortOrder
-    usuario_id?: SortOrder
+    usuarioId?: SortOrder
     tipo?: SortOrder
     descricao?: SortOrder
     status?: SortOrder
-    data_criacao?: SortOrder
+    dataCriacao?: SortOrder
   }
 
   export type demandasMinOrderByAggregateInput = {
     id?: SortOrder
-    usuario_id?: SortOrder
+    usuarioId?: SortOrder
     tipo?: SortOrder
     descricao?: SortOrder
     status?: SortOrder
-    data_criacao?: SortOrder
+    dataCriacao?: SortOrder
   }
 
   export type demandasSumOrderByAggregateInput = {
     id?: SortOrder
-    usuario_id?: SortOrder
+    usuarioId?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -4786,42 +4786,42 @@ export namespace Prisma {
 
   export type usuariosCountOrderByAggregateInput = {
     id?: SortOrder
-    nome_completo?: SortOrder
+    nomeCompleto?: SortOrder
     cpf?: SortOrder
     telefone?: SortOrder
-    data_nascimento?: SortOrder
-    id_whatsappwebjs?: SortOrder
-    estado_conversa_id?: SortOrder
+    dataNascimento?: SortOrder
+    idWhatsappwebjs?: SortOrder
+    estadoConversaId?: SortOrder
   }
 
   export type usuariosAvgOrderByAggregateInput = {
     id?: SortOrder
-    estado_conversa_id?: SortOrder
+    estadoConversaId?: SortOrder
   }
 
   export type usuariosMaxOrderByAggregateInput = {
     id?: SortOrder
-    nome_completo?: SortOrder
+    nomeCompleto?: SortOrder
     cpf?: SortOrder
     telefone?: SortOrder
-    data_nascimento?: SortOrder
-    id_whatsappwebjs?: SortOrder
-    estado_conversa_id?: SortOrder
+    dataNascimento?: SortOrder
+    idWhatsappwebjs?: SortOrder
+    estadoConversaId?: SortOrder
   }
 
   export type usuariosMinOrderByAggregateInput = {
     id?: SortOrder
-    nome_completo?: SortOrder
+    nomeCompleto?: SortOrder
     cpf?: SortOrder
     telefone?: SortOrder
-    data_nascimento?: SortOrder
-    id_whatsappwebjs?: SortOrder
-    estado_conversa_id?: SortOrder
+    dataNascimento?: SortOrder
+    idWhatsappwebjs?: SortOrder
+    estadoConversaId?: SortOrder
   }
 
   export type usuariosSumOrderByAggregateInput = {
     id?: SortOrder
-    estado_conversa_id?: SortOrder
+    estadoConversaId?: SortOrder
   }
 
   export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -4874,52 +4874,52 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type usuariosCreateNestedManyWithoutEstados_conversaInput = {
-    create?: XOR<usuariosCreateWithoutEstados_conversaInput, usuariosUncheckedCreateWithoutEstados_conversaInput> | usuariosCreateWithoutEstados_conversaInput[] | usuariosUncheckedCreateWithoutEstados_conversaInput[]
-    connectOrCreate?: usuariosCreateOrConnectWithoutEstados_conversaInput | usuariosCreateOrConnectWithoutEstados_conversaInput[]
-    createMany?: usuariosCreateManyEstados_conversaInputEnvelope
+  export type usuariosCreateNestedManyWithoutEstadosConversaInput = {
+    create?: XOR<usuariosCreateWithoutEstadosConversaInput, usuariosUncheckedCreateWithoutEstadosConversaInput> | usuariosCreateWithoutEstadosConversaInput[] | usuariosUncheckedCreateWithoutEstadosConversaInput[]
+    connectOrCreate?: usuariosCreateOrConnectWithoutEstadosConversaInput | usuariosCreateOrConnectWithoutEstadosConversaInput[]
+    createMany?: usuariosCreateManyEstadosConversaInputEnvelope
     connect?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
   }
 
-  export type usuariosUncheckedCreateNestedManyWithoutEstados_conversaInput = {
-    create?: XOR<usuariosCreateWithoutEstados_conversaInput, usuariosUncheckedCreateWithoutEstados_conversaInput> | usuariosCreateWithoutEstados_conversaInput[] | usuariosUncheckedCreateWithoutEstados_conversaInput[]
-    connectOrCreate?: usuariosCreateOrConnectWithoutEstados_conversaInput | usuariosCreateOrConnectWithoutEstados_conversaInput[]
-    createMany?: usuariosCreateManyEstados_conversaInputEnvelope
+  export type usuariosUncheckedCreateNestedManyWithoutEstadosConversaInput = {
+    create?: XOR<usuariosCreateWithoutEstadosConversaInput, usuariosUncheckedCreateWithoutEstadosConversaInput> | usuariosCreateWithoutEstadosConversaInput[] | usuariosUncheckedCreateWithoutEstadosConversaInput[]
+    connectOrCreate?: usuariosCreateOrConnectWithoutEstadosConversaInput | usuariosCreateOrConnectWithoutEstadosConversaInput[]
+    createMany?: usuariosCreateManyEstadosConversaInputEnvelope
     connect?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
   }
 
-  export type usuariosUpdateManyWithoutEstados_conversaNestedInput = {
-    create?: XOR<usuariosCreateWithoutEstados_conversaInput, usuariosUncheckedCreateWithoutEstados_conversaInput> | usuariosCreateWithoutEstados_conversaInput[] | usuariosUncheckedCreateWithoutEstados_conversaInput[]
-    connectOrCreate?: usuariosCreateOrConnectWithoutEstados_conversaInput | usuariosCreateOrConnectWithoutEstados_conversaInput[]
-    upsert?: usuariosUpsertWithWhereUniqueWithoutEstados_conversaInput | usuariosUpsertWithWhereUniqueWithoutEstados_conversaInput[]
-    createMany?: usuariosCreateManyEstados_conversaInputEnvelope
+  export type usuariosUpdateManyWithoutEstadosConversaNestedInput = {
+    create?: XOR<usuariosCreateWithoutEstadosConversaInput, usuariosUncheckedCreateWithoutEstadosConversaInput> | usuariosCreateWithoutEstadosConversaInput[] | usuariosUncheckedCreateWithoutEstadosConversaInput[]
+    connectOrCreate?: usuariosCreateOrConnectWithoutEstadosConversaInput | usuariosCreateOrConnectWithoutEstadosConversaInput[]
+    upsert?: usuariosUpsertWithWhereUniqueWithoutEstadosConversaInput | usuariosUpsertWithWhereUniqueWithoutEstadosConversaInput[]
+    createMany?: usuariosCreateManyEstadosConversaInputEnvelope
     set?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
     disconnect?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
     delete?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
     connect?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
-    update?: usuariosUpdateWithWhereUniqueWithoutEstados_conversaInput | usuariosUpdateWithWhereUniqueWithoutEstados_conversaInput[]
-    updateMany?: usuariosUpdateManyWithWhereWithoutEstados_conversaInput | usuariosUpdateManyWithWhereWithoutEstados_conversaInput[]
+    update?: usuariosUpdateWithWhereUniqueWithoutEstadosConversaInput | usuariosUpdateWithWhereUniqueWithoutEstadosConversaInput[]
+    updateMany?: usuariosUpdateManyWithWhereWithoutEstadosConversaInput | usuariosUpdateManyWithWhereWithoutEstadosConversaInput[]
     deleteMany?: usuariosScalarWhereInput | usuariosScalarWhereInput[]
   }
 
-  export type usuariosUncheckedUpdateManyWithoutEstados_conversaNestedInput = {
-    create?: XOR<usuariosCreateWithoutEstados_conversaInput, usuariosUncheckedCreateWithoutEstados_conversaInput> | usuariosCreateWithoutEstados_conversaInput[] | usuariosUncheckedCreateWithoutEstados_conversaInput[]
-    connectOrCreate?: usuariosCreateOrConnectWithoutEstados_conversaInput | usuariosCreateOrConnectWithoutEstados_conversaInput[]
-    upsert?: usuariosUpsertWithWhereUniqueWithoutEstados_conversaInput | usuariosUpsertWithWhereUniqueWithoutEstados_conversaInput[]
-    createMany?: usuariosCreateManyEstados_conversaInputEnvelope
+  export type usuariosUncheckedUpdateManyWithoutEstadosConversaNestedInput = {
+    create?: XOR<usuariosCreateWithoutEstadosConversaInput, usuariosUncheckedCreateWithoutEstadosConversaInput> | usuariosCreateWithoutEstadosConversaInput[] | usuariosUncheckedCreateWithoutEstadosConversaInput[]
+    connectOrCreate?: usuariosCreateOrConnectWithoutEstadosConversaInput | usuariosCreateOrConnectWithoutEstadosConversaInput[]
+    upsert?: usuariosUpsertWithWhereUniqueWithoutEstadosConversaInput | usuariosUpsertWithWhereUniqueWithoutEstadosConversaInput[]
+    createMany?: usuariosCreateManyEstadosConversaInputEnvelope
     set?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
     disconnect?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
     delete?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
     connect?: usuariosWhereUniqueInput | usuariosWhereUniqueInput[]
-    update?: usuariosUpdateWithWhereUniqueWithoutEstados_conversaInput | usuariosUpdateWithWhereUniqueWithoutEstados_conversaInput[]
-    updateMany?: usuariosUpdateManyWithWhereWithoutEstados_conversaInput | usuariosUpdateManyWithWhereWithoutEstados_conversaInput[]
+    update?: usuariosUpdateWithWhereUniqueWithoutEstadosConversaInput | usuariosUpdateWithWhereUniqueWithoutEstadosConversaInput[]
+    updateMany?: usuariosUpdateManyWithWhereWithoutEstadosConversaInput | usuariosUpdateManyWithWhereWithoutEstadosConversaInput[]
     deleteMany?: usuariosScalarWhereInput | usuariosScalarWhereInput[]
   }
 
-  export type demandasCreateNestedManyWithoutUsuariosInput = {
-    create?: XOR<demandasCreateWithoutUsuariosInput, demandasUncheckedCreateWithoutUsuariosInput> | demandasCreateWithoutUsuariosInput[] | demandasUncheckedCreateWithoutUsuariosInput[]
-    connectOrCreate?: demandasCreateOrConnectWithoutUsuariosInput | demandasCreateOrConnectWithoutUsuariosInput[]
-    createMany?: demandasCreateManyUsuariosInputEnvelope
+  export type demandasCreateNestedManyWithoutUsuarioInput = {
+    create?: XOR<demandasCreateWithoutUsuarioInput, demandasUncheckedCreateWithoutUsuarioInput> | demandasCreateWithoutUsuarioInput[] | demandasUncheckedCreateWithoutUsuarioInput[]
+    connectOrCreate?: demandasCreateOrConnectWithoutUsuarioInput | demandasCreateOrConnectWithoutUsuarioInput[]
+    createMany?: demandasCreateManyUsuarioInputEnvelope
     connect?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
   }
 
@@ -4929,24 +4929,24 @@ export namespace Prisma {
     connect?: estadosConversaWhereUniqueInput
   }
 
-  export type demandasUncheckedCreateNestedManyWithoutUsuariosInput = {
-    create?: XOR<demandasCreateWithoutUsuariosInput, demandasUncheckedCreateWithoutUsuariosInput> | demandasCreateWithoutUsuariosInput[] | demandasUncheckedCreateWithoutUsuariosInput[]
-    connectOrCreate?: demandasCreateOrConnectWithoutUsuariosInput | demandasCreateOrConnectWithoutUsuariosInput[]
-    createMany?: demandasCreateManyUsuariosInputEnvelope
+  export type demandasUncheckedCreateNestedManyWithoutUsuarioInput = {
+    create?: XOR<demandasCreateWithoutUsuarioInput, demandasUncheckedCreateWithoutUsuarioInput> | demandasCreateWithoutUsuarioInput[] | demandasUncheckedCreateWithoutUsuarioInput[]
+    connectOrCreate?: demandasCreateOrConnectWithoutUsuarioInput | demandasCreateOrConnectWithoutUsuarioInput[]
+    createMany?: demandasCreateManyUsuarioInputEnvelope
     connect?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
   }
 
-  export type demandasUpdateManyWithoutUsuariosNestedInput = {
-    create?: XOR<demandasCreateWithoutUsuariosInput, demandasUncheckedCreateWithoutUsuariosInput> | demandasCreateWithoutUsuariosInput[] | demandasUncheckedCreateWithoutUsuariosInput[]
-    connectOrCreate?: demandasCreateOrConnectWithoutUsuariosInput | demandasCreateOrConnectWithoutUsuariosInput[]
-    upsert?: demandasUpsertWithWhereUniqueWithoutUsuariosInput | demandasUpsertWithWhereUniqueWithoutUsuariosInput[]
-    createMany?: demandasCreateManyUsuariosInputEnvelope
+  export type demandasUpdateManyWithoutUsuarioNestedInput = {
+    create?: XOR<demandasCreateWithoutUsuarioInput, demandasUncheckedCreateWithoutUsuarioInput> | demandasCreateWithoutUsuarioInput[] | demandasUncheckedCreateWithoutUsuarioInput[]
+    connectOrCreate?: demandasCreateOrConnectWithoutUsuarioInput | demandasCreateOrConnectWithoutUsuarioInput[]
+    upsert?: demandasUpsertWithWhereUniqueWithoutUsuarioInput | demandasUpsertWithWhereUniqueWithoutUsuarioInput[]
+    createMany?: demandasCreateManyUsuarioInputEnvelope
     set?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
     disconnect?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
     delete?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
     connect?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
-    update?: demandasUpdateWithWhereUniqueWithoutUsuariosInput | demandasUpdateWithWhereUniqueWithoutUsuariosInput[]
-    updateMany?: demandasUpdateManyWithWhereWithoutUsuariosInput | demandasUpdateManyWithWhereWithoutUsuariosInput[]
+    update?: demandasUpdateWithWhereUniqueWithoutUsuarioInput | demandasUpdateWithWhereUniqueWithoutUsuarioInput[]
+    updateMany?: demandasUpdateManyWithWhereWithoutUsuarioInput | demandasUpdateManyWithWhereWithoutUsuarioInput[]
     deleteMany?: demandasScalarWhereInput | demandasScalarWhereInput[]
   }
 
@@ -4968,17 +4968,17 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type demandasUncheckedUpdateManyWithoutUsuariosNestedInput = {
-    create?: XOR<demandasCreateWithoutUsuariosInput, demandasUncheckedCreateWithoutUsuariosInput> | demandasCreateWithoutUsuariosInput[] | demandasUncheckedCreateWithoutUsuariosInput[]
-    connectOrCreate?: demandasCreateOrConnectWithoutUsuariosInput | demandasCreateOrConnectWithoutUsuariosInput[]
-    upsert?: demandasUpsertWithWhereUniqueWithoutUsuariosInput | demandasUpsertWithWhereUniqueWithoutUsuariosInput[]
-    createMany?: demandasCreateManyUsuariosInputEnvelope
+  export type demandasUncheckedUpdateManyWithoutUsuarioNestedInput = {
+    create?: XOR<demandasCreateWithoutUsuarioInput, demandasUncheckedCreateWithoutUsuarioInput> | demandasCreateWithoutUsuarioInput[] | demandasUncheckedCreateWithoutUsuarioInput[]
+    connectOrCreate?: demandasCreateOrConnectWithoutUsuarioInput | demandasCreateOrConnectWithoutUsuarioInput[]
+    upsert?: demandasUpsertWithWhereUniqueWithoutUsuarioInput | demandasUpsertWithWhereUniqueWithoutUsuarioInput[]
+    createMany?: demandasCreateManyUsuarioInputEnvelope
     set?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
     disconnect?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
     delete?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
     connect?: demandasWhereUniqueInput | demandasWhereUniqueInput[]
-    update?: demandasUpdateWithWhereUniqueWithoutUsuariosInput | demandasUpdateWithWhereUniqueWithoutUsuariosInput[]
-    updateMany?: demandasUpdateManyWithWhereWithoutUsuariosInput | demandasUpdateManyWithWhereWithoutUsuariosInput[]
+    update?: demandasUpdateWithWhereUniqueWithoutUsuarioInput | demandasUpdateWithWhereUniqueWithoutUsuarioInput[]
+    updateMany?: demandasUpdateManyWithWhereWithoutUsuarioInput | demandasUpdateManyWithWhereWithoutUsuarioInput[]
     deleteMany?: demandasScalarWhereInput | demandasScalarWhereInput[]
   }
 
@@ -5150,22 +5150,22 @@ export namespace Prisma {
   }
 
   export type usuariosCreateWithoutDemandasInput = {
-    nome_completo: string
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento?: Date | string | null
-    id_whatsappwebjs: string
-    estados_conversa?: estadosConversaCreateNestedOneWithoutUsuariosInput
+    dataNascimento?: Date | string | null
+    idWhatsappwebjs: string
+    estadosConversa?: estadosConversaCreateNestedOneWithoutUsuariosInput
   }
 
   export type usuariosUncheckedCreateWithoutDemandasInput = {
     id?: number
-    nome_completo: string
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento?: Date | string | null
-    id_whatsappwebjs: string
-    estado_conversa_id?: number | null
+    dataNascimento?: Date | string | null
+    idWhatsappwebjs: string
+    estadoConversaId?: number | null
   }
 
   export type usuariosCreateOrConnectWithoutDemandasInput = {
@@ -5185,67 +5185,67 @@ export namespace Prisma {
   }
 
   export type usuariosUpdateWithoutDemandasInput = {
-    nome_completo?: StringFieldUpdateOperationsInput | string
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
-    estados_conversa?: estadosConversaUpdateOneWithoutUsuariosNestedInput
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
+    estadosConversa?: estadosConversaUpdateOneWithoutUsuariosNestedInput
   }
 
   export type usuariosUncheckedUpdateWithoutDemandasInput = {
     id?: IntFieldUpdateOperationsInput | number
-    nome_completo?: StringFieldUpdateOperationsInput | string
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
-    estado_conversa_id?: NullableIntFieldUpdateOperationsInput | number | null
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
+    estadoConversaId?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
-  export type usuariosCreateWithoutEstados_conversaInput = {
-    nome_completo: string
+  export type usuariosCreateWithoutEstadosConversaInput = {
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento?: Date | string | null
-    id_whatsappwebjs: string
-    demandas?: demandasCreateNestedManyWithoutUsuariosInput
+    dataNascimento?: Date | string | null
+    idWhatsappwebjs: string
+    demandas?: demandasCreateNestedManyWithoutUsuarioInput
   }
 
-  export type usuariosUncheckedCreateWithoutEstados_conversaInput = {
+  export type usuariosUncheckedCreateWithoutEstadosConversaInput = {
     id?: number
-    nome_completo: string
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento?: Date | string | null
-    id_whatsappwebjs: string
-    demandas?: demandasUncheckedCreateNestedManyWithoutUsuariosInput
+    dataNascimento?: Date | string | null
+    idWhatsappwebjs: string
+    demandas?: demandasUncheckedCreateNestedManyWithoutUsuarioInput
   }
 
-  export type usuariosCreateOrConnectWithoutEstados_conversaInput = {
+  export type usuariosCreateOrConnectWithoutEstadosConversaInput = {
     where: usuariosWhereUniqueInput
-    create: XOR<usuariosCreateWithoutEstados_conversaInput, usuariosUncheckedCreateWithoutEstados_conversaInput>
+    create: XOR<usuariosCreateWithoutEstadosConversaInput, usuariosUncheckedCreateWithoutEstadosConversaInput>
   }
 
-  export type usuariosCreateManyEstados_conversaInputEnvelope = {
-    data: usuariosCreateManyEstados_conversaInput | usuariosCreateManyEstados_conversaInput[]
+  export type usuariosCreateManyEstadosConversaInputEnvelope = {
+    data: usuariosCreateManyEstadosConversaInput | usuariosCreateManyEstadosConversaInput[]
     skipDuplicates?: boolean
   }
 
-  export type usuariosUpsertWithWhereUniqueWithoutEstados_conversaInput = {
+  export type usuariosUpsertWithWhereUniqueWithoutEstadosConversaInput = {
     where: usuariosWhereUniqueInput
-    update: XOR<usuariosUpdateWithoutEstados_conversaInput, usuariosUncheckedUpdateWithoutEstados_conversaInput>
-    create: XOR<usuariosCreateWithoutEstados_conversaInput, usuariosUncheckedCreateWithoutEstados_conversaInput>
+    update: XOR<usuariosUpdateWithoutEstadosConversaInput, usuariosUncheckedUpdateWithoutEstadosConversaInput>
+    create: XOR<usuariosCreateWithoutEstadosConversaInput, usuariosUncheckedCreateWithoutEstadosConversaInput>
   }
 
-  export type usuariosUpdateWithWhereUniqueWithoutEstados_conversaInput = {
+  export type usuariosUpdateWithWhereUniqueWithoutEstadosConversaInput = {
     where: usuariosWhereUniqueInput
-    data: XOR<usuariosUpdateWithoutEstados_conversaInput, usuariosUncheckedUpdateWithoutEstados_conversaInput>
+    data: XOR<usuariosUpdateWithoutEstadosConversaInput, usuariosUncheckedUpdateWithoutEstadosConversaInput>
   }
 
-  export type usuariosUpdateManyWithWhereWithoutEstados_conversaInput = {
+  export type usuariosUpdateManyWithWhereWithoutEstadosConversaInput = {
     where: usuariosScalarWhereInput
-    data: XOR<usuariosUpdateManyMutationInput, usuariosUncheckedUpdateManyWithoutEstados_conversaInput>
+    data: XOR<usuariosUpdateManyMutationInput, usuariosUncheckedUpdateManyWithoutEstadosConversaInput>
   }
 
   export type usuariosScalarWhereInput = {
@@ -5253,36 +5253,36 @@ export namespace Prisma {
     OR?: usuariosScalarWhereInput[]
     NOT?: usuariosScalarWhereInput | usuariosScalarWhereInput[]
     id?: IntFilter<"usuarios"> | number
-    nome_completo?: StringFilter<"usuarios"> | string
+    nomeCompleto?: StringFilter<"usuarios"> | string
     cpf?: StringFilter<"usuarios"> | string
     telefone?: StringFilter<"usuarios"> | string
-    data_nascimento?: DateTimeNullableFilter<"usuarios"> | Date | string | null
-    id_whatsappwebjs?: StringFilter<"usuarios"> | string
-    estado_conversa_id?: IntNullableFilter<"usuarios"> | number | null
+    dataNascimento?: DateTimeNullableFilter<"usuarios"> | Date | string | null
+    idWhatsappwebjs?: StringFilter<"usuarios"> | string
+    estadoConversaId?: IntNullableFilter<"usuarios"> | number | null
   }
 
-  export type demandasCreateWithoutUsuariosInput = {
+  export type demandasCreateWithoutUsuarioInput = {
     tipo: string
     descricao?: string | null
     status?: string | null
-    data_criacao?: Date | string | null
+    dataCriacao?: Date | string | null
   }
 
-  export type demandasUncheckedCreateWithoutUsuariosInput = {
+  export type demandasUncheckedCreateWithoutUsuarioInput = {
     id?: number
     tipo: string
     descricao?: string | null
     status?: string | null
-    data_criacao?: Date | string | null
+    dataCriacao?: Date | string | null
   }
 
-  export type demandasCreateOrConnectWithoutUsuariosInput = {
+  export type demandasCreateOrConnectWithoutUsuarioInput = {
     where: demandasWhereUniqueInput
-    create: XOR<demandasCreateWithoutUsuariosInput, demandasUncheckedCreateWithoutUsuariosInput>
+    create: XOR<demandasCreateWithoutUsuarioInput, demandasUncheckedCreateWithoutUsuarioInput>
   }
 
-  export type demandasCreateManyUsuariosInputEnvelope = {
-    data: demandasCreateManyUsuariosInput | demandasCreateManyUsuariosInput[]
+  export type demandasCreateManyUsuarioInputEnvelope = {
+    data: demandasCreateManyUsuarioInput | demandasCreateManyUsuarioInput[]
     skipDuplicates?: boolean
   }
 
@@ -5302,20 +5302,20 @@ export namespace Prisma {
     create: XOR<estadosConversaCreateWithoutUsuariosInput, estadosConversaUncheckedCreateWithoutUsuariosInput>
   }
 
-  export type demandasUpsertWithWhereUniqueWithoutUsuariosInput = {
+  export type demandasUpsertWithWhereUniqueWithoutUsuarioInput = {
     where: demandasWhereUniqueInput
-    update: XOR<demandasUpdateWithoutUsuariosInput, demandasUncheckedUpdateWithoutUsuariosInput>
-    create: XOR<demandasCreateWithoutUsuariosInput, demandasUncheckedCreateWithoutUsuariosInput>
+    update: XOR<demandasUpdateWithoutUsuarioInput, demandasUncheckedUpdateWithoutUsuarioInput>
+    create: XOR<demandasCreateWithoutUsuarioInput, demandasUncheckedCreateWithoutUsuarioInput>
   }
 
-  export type demandasUpdateWithWhereUniqueWithoutUsuariosInput = {
+  export type demandasUpdateWithWhereUniqueWithoutUsuarioInput = {
     where: demandasWhereUniqueInput
-    data: XOR<demandasUpdateWithoutUsuariosInput, demandasUncheckedUpdateWithoutUsuariosInput>
+    data: XOR<demandasUpdateWithoutUsuarioInput, demandasUncheckedUpdateWithoutUsuarioInput>
   }
 
-  export type demandasUpdateManyWithWhereWithoutUsuariosInput = {
+  export type demandasUpdateManyWithWhereWithoutUsuarioInput = {
     where: demandasScalarWhereInput
-    data: XOR<demandasUpdateManyMutationInput, demandasUncheckedUpdateManyWithoutUsuariosInput>
+    data: XOR<demandasUpdateManyMutationInput, demandasUncheckedUpdateManyWithoutUsuarioInput>
   }
 
   export type demandasScalarWhereInput = {
@@ -5323,11 +5323,11 @@ export namespace Prisma {
     OR?: demandasScalarWhereInput[]
     NOT?: demandasScalarWhereInput | demandasScalarWhereInput[]
     id?: IntFilter<"demandas"> | number
-    usuario_id?: IntFilter<"demandas"> | number
+    usuarioId?: IntFilter<"demandas"> | number
     tipo?: StringFilter<"demandas"> | string
     descricao?: StringNullableFilter<"demandas"> | string | null
     status?: StringNullableFilter<"demandas"> | string | null
-    data_criacao?: DateTimeNullableFilter<"demandas"> | Date | string | null
+    dataCriacao?: DateTimeNullableFilter<"demandas"> | Date | string | null
   }
 
   export type estadosConversaUpsertWithoutUsuariosInput = {
@@ -5352,72 +5352,72 @@ export namespace Prisma {
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type usuariosCreateManyEstados_conversaInput = {
+  export type usuariosCreateManyEstadosConversaInput = {
     id?: number
-    nome_completo: string
+    nomeCompleto: string
     cpf: string
     telefone: string
-    data_nascimento?: Date | string | null
-    id_whatsappwebjs: string
+    dataNascimento?: Date | string | null
+    idWhatsappwebjs: string
   }
 
-  export type usuariosUpdateWithoutEstados_conversaInput = {
-    nome_completo?: StringFieldUpdateOperationsInput | string
+  export type usuariosUpdateWithoutEstadosConversaInput = {
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
-    demandas?: demandasUpdateManyWithoutUsuariosNestedInput
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
+    demandas?: demandasUpdateManyWithoutUsuarioNestedInput
   }
 
-  export type usuariosUncheckedUpdateWithoutEstados_conversaInput = {
+  export type usuariosUncheckedUpdateWithoutEstadosConversaInput = {
     id?: IntFieldUpdateOperationsInput | number
-    nome_completo?: StringFieldUpdateOperationsInput | string
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
-    demandas?: demandasUncheckedUpdateManyWithoutUsuariosNestedInput
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
+    demandas?: demandasUncheckedUpdateManyWithoutUsuarioNestedInput
   }
 
-  export type usuariosUncheckedUpdateManyWithoutEstados_conversaInput = {
+  export type usuariosUncheckedUpdateManyWithoutEstadosConversaInput = {
     id?: IntFieldUpdateOperationsInput | number
-    nome_completo?: StringFieldUpdateOperationsInput | string
+    nomeCompleto?: StringFieldUpdateOperationsInput | string
     cpf?: StringFieldUpdateOperationsInput | string
     telefone?: StringFieldUpdateOperationsInput | string
-    data_nascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    id_whatsappwebjs?: StringFieldUpdateOperationsInput | string
+    dataNascimento?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    idWhatsappwebjs?: StringFieldUpdateOperationsInput | string
   }
 
-  export type demandasCreateManyUsuariosInput = {
+  export type demandasCreateManyUsuarioInput = {
     id?: number
     tipo: string
     descricao?: string | null
     status?: string | null
-    data_criacao?: Date | string | null
+    dataCriacao?: Date | string | null
   }
 
-  export type demandasUpdateWithoutUsuariosInput = {
+  export type demandasUpdateWithoutUsuarioInput = {
     tipo?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
     status?: NullableStringFieldUpdateOperationsInput | string | null
-    data_criacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    dataCriacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type demandasUncheckedUpdateWithoutUsuariosInput = {
+  export type demandasUncheckedUpdateWithoutUsuarioInput = {
     id?: IntFieldUpdateOperationsInput | number
     tipo?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
     status?: NullableStringFieldUpdateOperationsInput | string | null
-    data_criacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    dataCriacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type demandasUncheckedUpdateManyWithoutUsuariosInput = {
+  export type demandasUncheckedUpdateManyWithoutUsuarioInput = {
     id?: IntFieldUpdateOperationsInput | number
     tipo?: StringFieldUpdateOperationsInput | string
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
     status?: NullableStringFieldUpdateOperationsInput | string | null
-    data_criacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    dataCriacao?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
 

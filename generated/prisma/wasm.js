@@ -122,11 +122,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 
 exports.Prisma.DemandasScalarFieldEnum = {
   id: 'id',
-  usuario_id: 'usuario_id',
+  usuarioId: 'usuarioId',
   tipo: 'tipo',
   descricao: 'descricao',
   status: 'status',
-  data_criacao: 'data_criacao'
+  dataCriacao: 'dataCriacao'
 };
 
 exports.Prisma.EstadosConversaScalarFieldEnum = {
@@ -137,12 +137,12 @@ exports.Prisma.EstadosConversaScalarFieldEnum = {
 
 exports.Prisma.UsuariosScalarFieldEnum = {
   id: 'id',
-  nome_completo: 'nome_completo',
+  nomeCompleto: 'nomeCompleto',
   cpf: 'cpf',
   telefone: 'telefone',
-  data_nascimento: 'data_nascimento',
-  id_whatsappwebjs: 'id_whatsappwebjs',
-  estado_conversa_id: 'estado_conversa_id'
+  dataNascimento: 'dataNascimento',
+  idWhatsappwebjs: 'idWhatsappwebjs',
+  estadoConversaId: 'estadoConversaId'
 };
 
 exports.Prisma.SortOrder = {
@@ -167,10 +167,10 @@ exports.Prisma.estadosConversaOrderByRelevanceFieldEnum = {
 };
 
 exports.Prisma.usuariosOrderByRelevanceFieldEnum = {
-  nome_completo: 'nome_completo',
+  nomeCompleto: 'nomeCompleto',
   cpf: 'cpf',
   telefone: 'telefone',
-  id_whatsappwebjs: 'id_whatsappwebjs'
+  idWhatsappwebjs: 'idWhatsappwebjs'
 };
 
 

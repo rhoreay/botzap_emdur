@@ -10,14 +10,14 @@ datasource db {
 
 model demandas {
   id           Int       @id @default(autoincrement())
-  usuario_id   Int
+  usuarioId    Int       @map("usuario_id")
   tipo         String    @db.VarChar(100)
   descricao    String?   @db.Text
   status       String?   @default("aberta") @db.VarChar(50)
-  data_criacao DateTime? @default(now()) @db.Timestamp(0)
-  usuarios     usuarios  @relation(fields: [usuario_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "demandas_ibfk_1")
+  dataCriacao  DateTime?  @default(now()) @db.Timestamp(0) @map("data_criacao")
+  usuario     usuarios   @relation(fields: [usuarioId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "demandas_ibfk_1")
 
-  @@index([usuario_id], map: "usuario_id")
+  @@index([usuarioId], map: "usuario_id")
 }
 
 model estadosConversa {
@@ -31,14 +31,14 @@ model estadosConversa {
 
 model usuarios {
   id                 Int               @id @default(autoincrement())
-  nome_completo      String            @db.VarChar(255)
+  nomeCompleto       String            @db.VarChar(255) @map("nome_completo")
   cpf                String            @unique(map: "cpf") @db.Char(11)
   telefone           String            @db.VarChar(20)
-  data_nascimento    DateTime?         @db.Date
-  id_whatsappwebjs   String            @unique(map: "id_whatsappwebjs") @db.VarChar(255)
-  estado_conversa_id Int?
+  dataNascimento     DateTime?         @db.Date @map("data_nascimento")
+  idWhatsappwebjs    String            @unique(map: "id_whatsappwebjs") @db.VarChar(255) @map("id_whatsappjs")
+  estadoConversaId   Int?              @map("estado_conversa_id")
   demandas           demandas[]
-  estados_conversa   estadosConversa? @relation(fields: [estado_conversa_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "usuarios_ibfk_1")
+  estadosConversa    estadosConversa? @relation(fields: [estadoConversaId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "usuarios_ibfk_1")
 
-  @@index([estado_conversa_id], map: "estado_conversa_id")
+  @@index([estadoConversaId], map: "estado_conversa_id")
 }
